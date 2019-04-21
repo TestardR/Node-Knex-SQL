@@ -124,3 +124,20 @@ module.exports = function (db) {
 app.set('db', db)
 return app
 }
+
+
+====================================================================================================================================
+
+Resetting a database
+
+!!!! WARNING Delete the database file - You wouldn't do this in a production environement however but while testing and troubleshooting we can do it . !!!!!
+
+rm dev.sqlite3
+
+Add the last migration to the databse file
+
+yarn run knex migraet:latest
+
+Add the seed data
+
+yarn run knex seed:run
